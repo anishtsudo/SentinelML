@@ -16,7 +16,7 @@ Apple clang 21, Python 3.13. Run `python -m sentinelml.env` for the full report.
 | Phase | Component | State |
 |---|---|---|
 | 1 | Project setup (Python env, C++/CMake toolchain, tests) | done — 7 pytest + 28 GoogleTest passing (release & ASan) |
-| 2 | Data processing engine (CICIDS2017, UNSW-NB15) | not started |
+| 2 | Data processing engine (CICIDS2017, UNSW-NB15) | in progress — dataset research and methodology drafted ([research/](research/)); no data downloaded yet |
 | 3 | Detection engine (LR, RF, XGBoost, MLP, Isolation Forest) | not started |
 | 4 | C++ inference engine (batching, threads, layout, NEON) | not started |
 | 5 | Benchmarking framework | not started |
@@ -35,7 +35,8 @@ configs/             Experiment configurations
 data/raw/            Downloaded datasets (git-ignored)
 data/processed/      Cleaned Parquet caches (git-ignored)
 results/             Benchmark output (git-ignored; curated summaries go in docs/)
-docs/                Design decisions and write-ups
+docs/                Engineering decisions and write-ups
+research/            Dataset analysis and experimental methodology (with sources)
 scripts/             Setup and verification scripts
 ```
 
