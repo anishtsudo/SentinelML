@@ -1,0 +1,51 @@
+# --- Python ---
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# --- C++ / CMake ---
+build/
+compile_commands.json
+# clangd index
+.cache/
+
+# --- Data: never commit datasets (size + licensing). Keep the folders. ---
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# --- Benchmark output: raw runs are regenerable; commit curated summaries only ---
+results/*
+!results/.gitkeep
+
+# --- Dataset / artifact formats anywhere in the tree (defence in depth) ---
+*.pcap
+*.pcapng
+*.parquet
+*.zip
+*.tar.gz
+*.7z
+# Trained model binaries are regenerable from code + config
+*.pkl
+*.joblib
+*.ubj
+models/
+
+# --- Secrets: never commit ---
+.env
+.env.*
+*.pem
+*.key
+*.p12
+credentials*.json
+secrets*.json
+
+# --- OS / editors ---
+.DS_Store
+.vscode/
+.idea/
